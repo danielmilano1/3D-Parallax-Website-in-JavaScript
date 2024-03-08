@@ -249,7 +249,7 @@ main {
     position: absolute;
     width: 650px;
     top: calc(50% + 195px);
-    left: calc(50% - 400px);
+    left: calc(50% - 650px);
     z-index: 18;
 }
 
