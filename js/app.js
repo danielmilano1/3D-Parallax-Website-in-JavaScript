@@ -12,6 +12,7 @@ window.addEventListener("mousemove", (e) => {
         let speedx = el.dataset.speedx
         let speedy = el.dataset.speedy
         let speedz = el.dataset.speedz
+        let rotateSpeed = el.dataset.rotation;
 
         let isInLeft =
             parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1
@@ -21,7 +22,7 @@ window.addEventListener("mousemove", (e) => {
         el.style.transform = `
         translateX(calc(-50% + ${-xValue * speedx}px)) 
         translateY(calc(-50% + ${yValue * speedy}px))
-        rotateY(${rotateDegree}deg)
+        rotateY(${rotateDegree * rotateSpeed}deg)
         perspective(2300px)
         translateZ(${zValue * speedz}px) 
         `
